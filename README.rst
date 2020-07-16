@@ -129,7 +129,7 @@ page or ask us at our active Gitter channel, where we have maintainers from
 all over the world. We appreciate any help!
 
 We also have a
-`newcomer guide <http://coala.io/newcomer>`__
+`Newcomers' Guide <https://coala.io/newcomer>`__
 to help you get started by fixing an issue yourself! If you get stuck anywhere
 or need some help, feel free to contact us on Gitter or drop a mail at our
 `newcomer mailing list <https://groups.google.com/d/forum/coala-newcomers>`__.
@@ -171,8 +171,6 @@ License
 .. |Stable| image:: https://img.shields.io/badge/latest%20stable-0.11.1-green.svg
 .. |PyPI| image:: https://img.shields.io/pypi/v/coala-bears.svg
    :target: https://pypi.python.org/pypi/coala-bears
-.. |Linux| image:: https://img.shields.io/circleci/project/coala/coala-bears/master.svg?label=linux%20build
-   :target: https://circleci.com/gh/coala/coala-bears
 .. |Windows| image:: https://img.shields.io/appveyor/ci/coala/coala-bears/master.svg?label=windows%20build
    :target: https://ci.appveyor.com/project/coala/coala-bears/branch/master
 .. |Documentation Status| image:: https://readthedocs.org/projects/coala/badge/?version=latest

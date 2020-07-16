@@ -1,7 +1,8 @@
 [all]
 files = *.py, bears/**/*.py, tests/**/*.py, .moban.dt/*.py.in
 ignore = tests/python/test_files/pylint_test.py, tests/python/bandit_test_files/*,
-         tests/python/vulture_test_files/*
+         tests/python/vulture_test_files/*,
+         .ci/Fudge*.ps*
 
 max_line_length = 80
 use_spaces = True
@@ -70,16 +71,17 @@ ignore = *.py
 [all.yml]
 bears = YAMLLintBear
 files = *.yml, *.yaml, .ci/*.yml, tests/**/*.yml
+ignore = MYMETA.yml
 
 [bash]
 bears = ShellCheckBear
 files = .ci/*.sh
-ignore = .ci/deps.pip.sh
 shell = bash
 shellcheck_ignore = SC2046, SC2154, SC2155
 
 [jinja2]
 bears = Jinja2Bear
 files = **.jj2
+check_end_labels = False
 # Bug in handling of ".. list | sort"
-ignore = .moban.dt/Gemfile.jj2, .moban.dt/bear-requirements.txt.jj2, .moban.dt/package.json.jj2
+ignore = .moban.dt/Gemfile.jj2, .moban.dt/bear-requirements.txt.jj2, .moban.dt/package.json.jj2, .moban.dt/bears-travis.yml.jj2

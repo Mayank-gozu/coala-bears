@@ -64,6 +64,7 @@ class PySafetyBear(LocalBear):
     AUTHORS_EMAILS = {'bence@underyx.me'}
     LICENSE = 'AGPL'
     CAN_DETECT = {'Security'}
+    ASCIINEMA_URL = 'https://asciinema.org/a/221386'
 
     def setup_dependencies(self):
         file = self.download_cached_file(_insecure_full_json_url,
@@ -93,7 +94,7 @@ class PySafetyBear(LocalBear):
 
         for vulnerability in safety.check(packages, key=None,
                                           db_mirror=db_path, cached=False,
-                                          ignore_ids=cve_ignore):
+                                          ignore_ids=cve_ignore, proxy=None):
             if 'cve' in vulnerability.vuln_id.strip().lower():
                 message_template = (
                     '{vuln.name}{vuln.spec} is vulnerable to {vuln.vuln_id} '
